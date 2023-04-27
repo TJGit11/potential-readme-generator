@@ -19,7 +19,7 @@ let { description, last_name } = await inquirer.prompt([
     type: "list",
     name: "license",
     message: "Which license would you like to use?",
-    choices: [""],
+    choices: ["Mozilla, "],
     filter(val) {
       return val.toLowerCase();
     },
@@ -44,5 +44,11 @@ ${generateLicense(size)}
 fs.writeFile("README.md", readmeText);
 
 function generateLicense(license) {
-  if (license === "option 1") return "[![License] .......";
+  if (license === "Mozilla") {
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+  } else if (license === "") {
+    return;
+  } else if (license === "") {
+    return;
+  } else return "No license selected";
 }
