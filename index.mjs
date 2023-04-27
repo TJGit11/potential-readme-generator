@@ -3,7 +3,7 @@ import fs from "fs/promises";
 
 // let response = await inquirer.prompt([
 // structured formate
-let { project_title, project_description, license, usage, contact } =
+let { project_title, project_description, usage, contact, license } =
   await inquirer.prompt([
     // destructured format
     {
@@ -17,15 +17,6 @@ let { project_title, project_description, license, usage, contact } =
       message: "Describe your project here",
     },
     {
-      type: "list",
-      name: "license",
-      message: "Which license would you like to use?",
-      choices: ["Mozilla", "Artistic", "Eclipse"],
-      filter(val) {
-        return val.toLowerCase();
-      },
-    },
-    {
       type: "input",
       name: "usage",
       message: "Helpful screenshots go here",
@@ -35,25 +26,33 @@ let { project_title, project_description, license, usage, contact } =
       name: "contact",
       message: "Helpful links go here",
     },
+    {
+      type: "list",
+      name: "license",
+      message: "Which license would you like to use?",
+      choices: ["Mozilla", "Artistic", "Eclipse"],
+      filter(val) {
+        return val.toLowerCase();
+      },
+    },
   ]);
 
-console.log({ project_title, project_description, license, usage, contact });
+console.log({ project_title, project_description, usage, contact, license });
 
-let readmeText = `
-# Title
+let readmeText = `# Title
 ${project_title}
 
 ## Project Description
 ${project_description}
-
-## License
-${generateLicense(license)}
 
 ## Usage
 ${usage}
 
 ## Contact
 ${contact}
+
+## License
+${generateLicense(license)}
 `;
 
 fs.writeFile("README.md", readmeText);
