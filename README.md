@@ -1,14 +1,14 @@
-# Big title
-Big title
+# README Generator
+README Generator
 
 ## Project Description
-test
+This automatically generates a README for your repository
 
 ## Usage
-test
+
 
 ## Contact
-test
+https://github.com/TJGit11/potential-readme-generator
 
 ## License
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
