@@ -39,7 +39,7 @@ let { project_title, project_description, usage, contact, license } =
 
 console.log({ project_title, project_description, usage, contact, license });
 
-let readmeText = `# Title
+let readmeText = `# ${project_title}
 ${project_title}
 
 ## Project Description
