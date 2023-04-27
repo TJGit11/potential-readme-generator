@@ -3,33 +3,43 @@ import fs from "fs/promises";
 
 // let response = await inquirer.prompt([
 // structured formate
-let { project_title, project_description, license } = await inquirer.prompt([
-  // destructured format
-  {
-    type: "input",
-    name: "project_title",
-    message: "What is the name of your project?",
-  },
-  {
-    type: "input",
-    name: "project_description",
-    message: "Describe your project here",
-  },
-  {
-    type: "list",
-    name: "license",
-    message: "Which license would you like to use?",
-    choices: ["Mozilla", "Artistic", "Eclipse"],
-    filter(val) {
-      return val.toLowerCase();
+let { project_title, project_description, license, usage, contact } =
+  await inquirer.prompt([
+    // destructured format
+    {
+      type: "input",
+      name: "project_title",
+      message: "What is the name of your project?",
     },
-  },
-]);
+    {
+      type: "input",
+      name: "project_description",
+      message: "Describe your project here",
+    },
+    {
+      type: "list",
+      name: "license",
+      message: "Which license would you like to use?",
+      choices: ["Mozilla", "Artistic", "Eclipse"],
+      filter(val) {
+        return val.toLowerCase();
+      },
+    },
+    {
+      type: "input",
+      name: "usage",
+      message: "Helpful screenshots go here",
+    },
+    {
+      type: "input",
+      name: "contact",
+      message: "Helpful links go here",
+    },
+  ]);
 
-console.log({ project_title, project_description, license });
+console.log({ project_title, project_description, license, usage, contact });
 
 let readmeText = `
-
 # Title
 ${project_title}
 
@@ -39,6 +49,11 @@ ${project_description}
 ## License
 ${generateLicense(license)}
 
+## Usage
+${usage}
+
+## Contact
+${contact}
 `;
 
 fs.writeFile("README.md", readmeText);
@@ -50,5 +65,5 @@ function generateLicense(license) {
     return "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
   } else if (license === "eclipse") {
     return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
-  } else return "n";
+  } else return "No license selected";
 }
