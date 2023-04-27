@@ -1,8 +1,8 @@
-# README Generator
-README Generator
+# README Generator Project
+README Generator Project
 
 ## Project Description
-This automatically generates a README for your repository
+This creates a README for you
 
 ## Usage
 
