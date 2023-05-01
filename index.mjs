@@ -43,7 +43,7 @@ let readmeText = `# ${project_title}
 ${project_title}
 
 ## Table of Contents
-- [Project Description](#installation)
+- [Project Description](#project-description)
 - [Usage](#usage)
 - [Contact](#contributing)
 - [Tests](#tests)
