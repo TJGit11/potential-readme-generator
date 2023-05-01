@@ -42,6 +42,13 @@ console.log({ project_title, project_description, usage, contact, license });
 let readmeText = `# ${project_title}
 ${project_title}
 
+## Table of Contents
+- [Project Description](#installation)
+- [Usage](#usage)
+- [Contact](#contributing)
+- [Tests](#tests)
+- [License](#license)
+
 ## Project Description
 ${project_description}
 

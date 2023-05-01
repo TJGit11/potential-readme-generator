@@ -1,6 +1,13 @@
 # README Generator Project
 README Generator Project
 
+## Table of Contents
+- [Project Description](#installation)
+- [Usage](#usage)
+- [Contact](#contributing)
+- [Tests](#tests)
+- [License](#license)
+
 ## Project Description
 This creates a README for you
 
