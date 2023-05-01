@@ -4,8 +4,7 @@ README Generator Project
 ## Table of Contents
 - [Project Description](#project-description)
 - [Usage](#usage)
-- [Contact](#contributing)
-- [Tests](#tests)
+- [Contact](#contact)
 - [License](#license)
 
 ## Project Description
