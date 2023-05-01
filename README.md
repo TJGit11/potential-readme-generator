@@ -11,6 +11,9 @@ README Generator Project
 This creates a README for you
 
 ## Usage
+![image](https://user-images.githubusercontent.com/74613952/235407414-76e99caa-9102-4106-bcab-053f0e86c8b0.png)
+![image](https://user-images.githubusercontent.com/74613952/235407444-8dbe37bc-9b56-48c8-a085-033c28e83129.png)
+
 
 
 ## Contact
